@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <emscripten.h>
 
-
-int main() {
-  printf("hello world");
+EMSCRIPTEN_KEEPALIVE
+int sayHi() {
+  printf("Hi!");
+  return 1;
 }
